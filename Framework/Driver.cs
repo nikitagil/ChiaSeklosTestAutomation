@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Framework
 {
-    internal class Driver
+    public class Driver
     {
         private static ThreadLocal<IWebDriver> driver = new ThreadLocal<IWebDriver>();
 

@@ -1,6 +1,8 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using System.Collections.Generic;
 using System.Linq;
+
 namespace Framework
 {
     internal class Common
@@ -28,6 +30,19 @@ namespace Framework
         internal static string GetElementText(string locator)
         {
             return GetElement(locator).Text;
+        }
+
+        internal static void MovetoElement(string locator)
+        {
+            IWebElement element = GetElement(locator);
+            Actions actions = new Actions(Driver.GetDriver());
+            actions.MoveToElement(element);
+            actions.Perform();
+        }
+
+        internal static void WaitForSeconds()
+        {
+            System.Threading.Thread.Sleep(3000);
         }
     }
 }
