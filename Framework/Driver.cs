@@ -12,7 +12,10 @@ namespace Framework
 
         public static void Initialize()
         {
-            driver.Value = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("window-size=800,600");
+
+            driver.Value = new ChromeDriver(options);
         }
 
         public static IWebDriver GetDriver()
@@ -23,6 +26,11 @@ namespace Framework
         public static void OpenPage(string url)
         {
             driver.Value.Url = url;
+        }
+
+        public static string CurrentPageUrl()
+        {
+            return driver.Value.Url;
         }
 
         public static void Quit()

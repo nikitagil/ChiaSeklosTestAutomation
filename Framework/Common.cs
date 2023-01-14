@@ -1,7 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using System.Collections.Generic;
-using System.Linq;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+using System;
 
 namespace Framework
 {
@@ -11,12 +12,6 @@ namespace Framework
         {
             return Driver.GetDriver().FindElement(By.XPath(locator));
         }
-
-        internal static List<IWebElement> GetElements(string locator)
-        {
-            return Driver.GetDriver().FindElements(By.XPath(locator)).ToList();
-        }
-
         internal static void ClickElement(string locator)
         {
             GetElement(locator).Click();
@@ -25,6 +20,11 @@ namespace Framework
         internal static void SendKeysToElement(string locator, string keys)
         {
             GetElement(locator).SendKeys(keys);
+        }
+
+        internal static void ClearInputElement(string locator)
+        {
+            GetElement(locator).Clear();
         }
 
         internal static string GetElementText(string locator)
@@ -40,9 +40,25 @@ namespace Framework
             actions.Perform();
         }
 
+        internal static void WaitForElementToBeVisible(string locator)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
+        }
+
         internal static void WaitForSeconds()
         {
             System.Threading.Thread.Sleep(3000);
+        }
+
+        internal static void AcceptAlert()
+        {
+            Driver.GetDriver().SwitchTo().Alert().Accept();
+        }
+
+        internal static string GetAlertText()
+        {
+            return Driver.GetDriver().SwitchTo().Alert().Text;
         }
     }
 }
