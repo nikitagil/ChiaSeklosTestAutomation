@@ -25,7 +25,7 @@ Resolution - 800x600
 ### **Scenario 2: Wishlist**
 
 ##### *Case 1: Add Item Wishlist and remove it*
-1. ###### Hover to “Agar” product 
+1. ###### Hover to “Agar agaras” product 
 2. ###### Click Heart Icon
 3. ###### Verify the message that pops up says "Produktas pridėtas!"
 4. ###### Click “Žiūrėti norų sąrašą”
@@ -35,24 +35,26 @@ Resolution - 800x600
 ### **Scenario 3: Shopping Basket**
 
 ##### *Case 1: Add Item to Shopping Basket*
-1. ###### Hover to “Ašvaganda (Ashwagandha) milteliai” product
-2. ###### Click “Greita peržiūra”
-3. ###### Click “Į Krepšelį” button
-4. ###### Verify the alert that pops up says "Pasirinkite produkto savybes prieš pridėdami šį produktą į savo krepšelį."
-5. ###### Click “OK” button
-6. ###### Click “100g” button
-7. ###### Click “+” button
-8. ###### Click “Į Krepšelį” button
-9. ###### Verify the message that appears at the top of the page says "2 × “Ašvaganda (Ashwagandha) milteliai” - įdėti į krepšelį".
+1. ###### Scroll down to the bottom of product list
+2. ###### Hover to “Ašvaganda (Ashwagandha) milteliai” product
+3. ###### Click “Greita peržiūra”
+4. ###### Click “Į Krepšelį” button
+5. ###### Verify the alert that pops up says "Pasirinkite produkto savybes prieš pridėdami šį produktą į savo krepšelį."
+6. ###### Click “OK” button
+7. ###### Click “100g” button
+8. ###### Click “+” button
+9. ###### Click “Į Krepšelį” button
+10. ###### Verify the message that appears at the top of the page says "2 × “Ašvaganda (Ashwagandha) milteliai” - įdėti į krepšelį".
 
 ##### *Case 2: Remove Item From Basket Using Basket Slide Menu*
-1. ###### Hover to “Anakardžių riešutai skrudinti meduje” product
-2. ###### Click “Greita peržiūra”
-3. ###### Click “450g” button
-4. ###### Click quantity input field (after "1")
-5. ###### Press Backspace
-6. ###### Type “8”
-7. ###### Click “Į Krepšelį” button
-8. ###### Click Basket icon
-9. ###### Click cross icon next to product
-10. ###### Verify the text that appears says "Krepšelyje nėra produktų."
+1. ###### Scroll down to the bottom of product list
+2. ###### Hover to “Anakardžių riešutai skrudinti meduje” product
+3. ###### Click “Greita peržiūra”
+4. ###### Click “450g” button
+5. ###### Click quantity input field (after "1")
+6. ###### Press Backspace
+7. ###### Type “8”
+8. ###### Click “Į Krepšelį” button
+9. ###### Click Basket icon
+10. ###### Click cross icon next to product
+11. ###### Verify the text that appears says "Krepšelyje nėra produktų."
