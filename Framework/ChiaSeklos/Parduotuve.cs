@@ -40,12 +40,6 @@
             Common.ClickElement(MainMenuLocator);
         }
 
-        public static void ClickSearchfield()
-        {
-            Common.WaitForElementToBeVisible(SearchfieldLocator);
-            Common.ClickElement(SearchfieldLocator);
-        }
-
         public static void SendKeysToSearchfield(string searchword)
         {
             Common.SendKeysToElement(SearchfieldLocator, searchword);
@@ -163,11 +157,6 @@
         {
             Common.WaitForElementToBeVisible(Q450GLocator);
             Common.ClickElement(Q450GLocator);
-        }
-
-        public static void ClickQuantityInputField()
-        {
-            Common.ClickElement(QuantityInputFieldLocator);
         }
 
         public static void SendKeysToQuantityInputField(string quantity)

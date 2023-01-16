@@ -19,7 +19,6 @@ namespace Tests.ChiaSeklosTests
             string item = "aguonos";
             
             Parduotuve.ClickBurgerMenu();
-            Parduotuve.ClickSearchfield();
             Parduotuve.SendKeysToSearchfield(item);
             Parduotuve.ClickSearchResult();
             string actualUrl = Driver.CurrentPageUrl();
@@ -34,7 +33,6 @@ namespace Tests.ChiaSeklosTests
             string input = "hello";
 
             Parduotuve.ClickBurgerMenu();
-            Parduotuve.ClickSearchfield();
             Parduotuve.SendKeysToSearchfield(input);
             string actualSearchResultText = Parduotuve.GetSearchResultNoSuchItem();
             Parduotuve.ClickSearchIcon();
@@ -89,7 +87,6 @@ namespace Tests.ChiaSeklosTests
             Parduotuve.MoveToCashew();
             Parduotuve.ClickCashewQuickPreview();
             Parduotuve.Click450G();
-            Parduotuve.ClickQuantityInputField();
             Parduotuve.ClearQuantityInputField();
             Parduotuve.SendKeysToQuantityInputField(quantity);
             Parduotuve.ClickToBasketButton();
