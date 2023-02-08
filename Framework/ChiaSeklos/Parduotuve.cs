@@ -3,32 +3,32 @@
     public class Parduotuve
     {
         private static string url = "https://chiaseklos.lt/parduotuve/";
-        private static string MainMenuLocator = "//*[@data-open='#main-menu']//*[@class='icon-menu']";
-        private static string SearchfieldLocator = "//*[@id='main-menu']//*[@type='search']";
-        private static string ClickResultLocator = "//*[@class='autocomplete-suggestion']";
-        private static string AgarLocator = "//*[contains(text(),'agar')]";
-        private static string AgarAddToWishlistLocator = "(//*[@class='icon-heart'])[1]";
-        private static string ItemAddedToWishlistNotificationLocator = "//*[@id='yith-wcwl-message']";
-        private static string AgarGoToWishlistLocator = "//*[@class='yith-wcwl-wishlistaddedbrowse show']";
-        private static string RemoveItemFromWishlistLocator = "//*[@title='Remove this product']";
-        private static string RemovalFromWishlistConfirmLocator = "//*[@class='woocommerce-message message-wrapper']";
-        private static string AshwagandhaLocator = "//*[contains(text(),'Ašvaganda')]";
-        private static string AshwagandhaQuickPreviewLocator = "//*[@data-prod='13703']";
-        private static string BasketButtonLocator = "//*[@class='single_variation_wrap']//*[@type='submit']";
-        private static string AddMoreLocator = "//*[@value='+']";
-        private static string Q100GLocator = "//*[@title='100 g.']//*[contains(text(),'100 g.')]";
-        private static string BasketNotificationTextLocator = "//*[contains(@class, 'success')]";
-        private static string SearchResultNoSuchItemLocator = "//*[@class='search-name']";
-        private static string SearchIconLocator = "//*[@class='mfp-content']//*[@class='icon-search']";
-        private static string SearchFinalResultNoSuchItemLocator = "//*[@class='woocommerce-info']";
-        private static string CashewLocator = "//*[contains(text(),'Anakardžių')]";
-        private static string CashewQuickPreviewLocator = "//*[@data-prod='17240']";
-        private static string Q450GLocator = "//*[@title='450g']";
-        private static string QuantityInputFieldLocator = "//*[@type='number']";
-        private static string BasketIconLocator = "(//*[@class='icon-shopping-basket'])[2]";
-        private static string RemoveFromBasketButtonLocator = "//*[contains(@class,'remove')]";
-        private static string RemovalFromBasketConfirmLocator = "//*[contains(@class,'woocommerce-mini-cart')]";
-        private static string CloseBasketLocator = "//*[contains(@title,'Close')]";
+        private static string mainMenuLocator = "//*[@data-open='#main-menu']//*[@class='icon-menu']";
+        private static string searchfieldLocator = "//*[@id='main-menu']//*[@type='search']";
+        private static string clickResultLocator = "//*[@class='autocomplete-suggestion']";
+        private static string agarLocator = "//*[contains(text(),'agar')]";
+        private static string agarAddToWishlistLocator = "(//*[@class='icon-heart'])[1]";
+        private static string itemAddedToWishlistNotificationLocator = "//*[@id='yith-wcwl-message']";
+        private static string agarGoToWishlistLocator = "//*[@class='yith-wcwl-wishlistaddedbrowse show']";
+        private static string removeItemFromWishlistLocator = "//*[@title='Remove this product']";
+        private static string removalFromWishlistConfirmLocator = "//*[@class='woocommerce-message message-wrapper']";
+        private static string ashwagandhaLocator = "//*[contains(text(),'Ašvaganda')]";
+        private static string ashwagandhaQuickPreviewLocator = "//*[@data-prod='13703']";
+        private static string basketButtonLocator = "//*[@class='single_variation_wrap']//*[@type='submit']";
+        private static string addMoreLocator = "//*[@value='+']";
+        private static string q100GLocator = "//*[@title='100 g.']//*[contains(text(),'100 g.')]";
+        private static string basketNotificationTextLocator = "//*[contains(@class, 'success')]";
+        private static string searchResultNoSuchItemLocator = "//*[@class='search-name']";
+        private static string searchIconLocator = "//*[@class='mfp-content']//*[@class='icon-search']";
+        private static string searchFinalResultNoSuchItemLocator = "//*[@class='woocommerce-info']";
+        private static string cashewLocator = "//*[contains(text(),'Anakardžių')]";
+        private static string cashewQuickPreviewLocator = "//*[@data-prod='17240']";
+        private static string q450GLocator = "//*[@title='450g']";
+        private static string quantityInputFieldLocator = "//*[@type='number']";
+        private static string basketIconLocator = "(//*[@class='icon-shopping-basket'])[2]";
+        private static string removeFromBasketButtonLocator = "//*[contains(@class,'remove')]";
+        private static string removalFromBasketConfirmLocator = "//*[contains(@class,'woocommerce-mini-cart')]";
+        private static string closeBasketLocator = "//*[contains(@title,'Close')]";
 
         public static void Open()
         {
@@ -37,68 +37,68 @@
 
         public static void ClickBurgerMenu()
         {
-            Common.ClickElement(MainMenuLocator);
+            Common.ClickElement(mainMenuLocator);
         }
 
         public static void SendKeysToSearchfield(string searchword)
         {
-            Common.SendKeysToElement(SearchfieldLocator, searchword);
+            Common.SendKeysToElement(searchfieldLocator, searchword);
         }
 
         public static void ClickSearchResult()
         {
-            Common.WaitForElementToBeVisible(ClickResultLocator);
-            Common.ClickElement(ClickResultLocator);
+            Common.WaitForElementToBeVisible(clickResultLocator);
+            Common.ClickElement(clickResultLocator);
         }
 
         public static void MoveToAgar()
         {
-            Common.MovetoElement(AgarLocator);
+            Common.MovetoElement(agarLocator);
         }
 
         public static void ClickAddToWishlist()
         {
-            Common.ClickElement(AgarAddToWishlistLocator);
+            Common.ClickElement(agarAddToWishlistLocator);
         }
 
         public static string GetWishlistNotificationText()
         {
-            Common.WaitForElementToBeVisible(ItemAddedToWishlistNotificationLocator);
-            return Common.GetElementText(ItemAddedToWishlistNotificationLocator);
+            Common.WaitForElementToBeVisible(itemAddedToWishlistNotificationLocator);
+            return Common.GetElementText(itemAddedToWishlistNotificationLocator);
         }
 
         public static void CLickToSeeWishlist()
         {
-            Common.ClickElement(AgarGoToWishlistLocator);
+            Common.ClickElement(agarGoToWishlistLocator);
         }
 
         public static void ClickToRemoveItem()
         {
-            Common.WaitForElementToBeVisible(RemoveItemFromWishlistLocator);
-            Common.ClickElement(RemoveItemFromWishlistLocator);
+            Common.WaitForElementToBeVisible(removeItemFromWishlistLocator);
+            Common.ClickElement(removeItemFromWishlistLocator);
         }
 
         public static string GetProductRemovalFromWishlistConfirm()
         {
-            Common.WaitForElementToBeVisible(RemovalFromWishlistConfirmLocator);
-            return Common.GetElementText(RemovalFromWishlistConfirmLocator);
+            Common.WaitForElementToBeVisible(removalFromWishlistConfirmLocator);
+            return Common.GetElementText(removalFromWishlistConfirmLocator);
         }
 
         public static void MoveToAshwagandha()
         {
-            Common.MovetoElement(AshwagandhaLocator);
+            Common.MovetoElement(ashwagandhaLocator);
         }
 
         public static void ClickQuickPreview()
         {
-            Common.WaitForElementToBeVisible(AshwagandhaQuickPreviewLocator);
-            Common.ClickElement(AshwagandhaQuickPreviewLocator);
+            Common.WaitForElementToBeVisible(ashwagandhaQuickPreviewLocator);
+            Common.ClickElement(ashwagandhaQuickPreviewLocator);
         }
 
         public static void ClickToBasketButton()
         {
-            Common.WaitForElementToBeVisible(BasketButtonLocator);
-            Common.ClickElement(BasketButtonLocator);
+            Common.WaitForElementToBeVisible(basketButtonLocator);
+            Common.ClickElement(basketButtonLocator);
         }
 
         public static string GetAlertText()
@@ -113,82 +113,82 @@
 
         public static void Click100G()
         {
-            Common.ClickElement(Q100GLocator);
+            Common.ClickElement(q100GLocator);
         }
 
         public static void ClickAddMore()
         {
-            Common.ClickElement(AddMoreLocator);
+            Common.ClickElement(addMoreLocator);
         }
 
         public static string GetBasketNotificationText()
         {
-            Common.WaitForElementToBeVisible(BasketNotificationTextLocator);
-            return Common.GetElementText(BasketNotificationTextLocator);
+            Common.WaitForElementToBeVisible(basketNotificationTextLocator);
+            return Common.GetElementText(basketNotificationTextLocator);
         }
 
         public static string GetSearchResultNoSuchItem()
         {
-            Common.WaitForElementToBeVisible(SearchResultNoSuchItemLocator);
-            return Common.GetElementText(SearchResultNoSuchItemLocator);
+            Common.WaitForElementToBeVisible(searchResultNoSuchItemLocator);
+            return Common.GetElementText(searchResultNoSuchItemLocator);
         }
 
         public static void ClickSearchIcon()
         {
-            Common.ClickElement(SearchIconLocator);
+            Common.ClickElement(searchIconLocator);
         }
 
         public static string GetFinalSearchResultNoSuchItem()
         {
-            return Common.GetElementText(SearchFinalResultNoSuchItemLocator);
+            return Common.GetElementText(searchFinalResultNoSuchItemLocator);
         }
 
         public static void MoveToCashew()
         {
-            Common.MovetoElement(CashewLocator);
+            Common.MovetoElement(cashewLocator);
         }
 
         public static void ClickCashewQuickPreview()
         {
-            Common.ClickElement(CashewQuickPreviewLocator);
+            Common.ClickElement(cashewQuickPreviewLocator);
         }
 
         public static void Click450G()
         {
-            Common.WaitForElementToBeVisible(Q450GLocator);
-            Common.ClickElement(Q450GLocator);
+            Common.WaitForElementToBeVisible(q450GLocator);
+            Common.ClickElement(q450GLocator);
         }
 
         public static void SendKeysToQuantityInputField(string quantity)
         {
-            Common.SendKeysToElement(QuantityInputFieldLocator, quantity);
+            Common.SendKeysToElement(quantityInputFieldLocator, quantity);
         }
 
         public static void ClearQuantityInputField()
         {
-            Common.ClearInputElement(QuantityInputFieldLocator);
+            Common.ClearInputElement(quantityInputFieldLocator);
         }
 
         public static void ClickBasketIcon()
         {
-            Common.ClickElement(BasketIconLocator);
+            Common.ClickElement(basketIconLocator);
         }
 
         public static void ClickRemoveFromBasketButton()
         {
-            Common.WaitForElementToBeVisible(RemoveFromBasketButtonLocator);
-            Common.ClickElement(RemoveFromBasketButtonLocator);
+            Common.WaitForElementToBeVisible(removeFromBasketButtonLocator);
+            Common.ClickElement(removeFromBasketButtonLocator);
         }
 
         public static string GetProductRemovalFromBasketConfirm()
         {
             Common.WaitForSeconds();
-            return Common.GetElementText(RemovalFromBasketConfirmLocator);
+            return Common.GetElementText(removalFromBasketConfirmLocator);
         }
 
         public static void ClickCloseBasketSlide()
         {
-            Common.ClickElement(CloseBasketLocator);
+            Common.ClickElement(closeBasketLocator);
         }
     }
 }
