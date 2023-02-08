@@ -60,5 +60,11 @@ namespace Framework
         {
             return Driver.GetDriver().SwitchTo().Alert().Text;
         }
+
+        internal static void WaitForElementAttributToContainValue(string locator, string attributeName, string value)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
+            wait.Until(driver => driver.FindElement(By.XPath(locator)).GetAttribute(attributeName).Contains(value));
+        }
     }
 }

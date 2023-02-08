@@ -182,7 +182,7 @@
 
         public static string GetProductRemovalFromBasketConfirm()
         {
-            Common.WaitForSeconds();
+            Common.WaitForElementAttributToContainValue(removalFromBasketConfirmLocator, "textContent", "Krepšelyje nėra produktų.");
             return Common.GetElementText(removalFromBasketConfirmLocator);
         }
 
