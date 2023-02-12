@@ -46,11 +46,6 @@ namespace Framework
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(locator)));
         }
 
-        internal static void WaitForSeconds()
-        {
-            System.Threading.Thread.Sleep(3000);
-        }
-
         internal static void AcceptAlert()
         {
             Driver.GetDriver().SwitchTo().Alert().Accept();
